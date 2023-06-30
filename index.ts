@@ -2,8 +2,9 @@ import { Page, chromium } from 'playwright'
 import { msleep } from '@well-balanced/utils'
 import { getCourts, Target } from './courts'
 
-const PROFILE_PATH =
-  '/Users/wynn/Library/Application Support/Google/Chrome/Profile 1/Default'
+require('dotenv').config()
+
+const PROFILE_PATH = process.env.PROFILE_PATH
 
 const PAGE_TIMEOUT = 30000
 
