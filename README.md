@@ -1,6 +1,5 @@
 # tar
-
-### Supported courts
+### Supported courts
 - ng: 내곡
 - yg: 양재시민의숲
 
