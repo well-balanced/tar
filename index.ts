@@ -6,7 +6,7 @@ require('dotenv').config()
 
 const PROFILE_PATH = process.env.PROFILE_PATH
 
-const PAGE_TIMEOUT = 30000
+const PAGE_TIMEOUT = 30 * 1000 // 30s
 
 async function main() {
     const [code] = process.argv.slice(2)
