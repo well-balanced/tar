@@ -23,9 +23,7 @@ async function main() {
             if (process.env.NODE_ENV === 'production') {
                 // til on hour
                 const initial = Math.floor(new Date().getTime() / (1000 * 60 * 60))
-                while (
-                    initial === Math.floor(new Date().getTime() / (1000 * 60 * 60))
-                    ) {
+                while (initial === Math.floor(new Date().getTime() / (1000 * 60 * 60))) {
                     await msleep(50)
                 }
             }
