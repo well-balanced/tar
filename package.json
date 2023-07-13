@@ -1,25 +1,29 @@
 {
-  "name": "tennis-auto-reservation",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "scripts": {
-    "dev-ng": "ts-node index.ts ng",
-    "dev-yg": "ts-node index.ts yg",
-    "ng": "NODE_ENV=production ts-node index.ts ng",
-    "yg": "NODE_ENV=production ts-node index.ts yg"
-  },
-  "dependencies": {
-    "@well-balanced/utils": "^0.1.3",
-    "date-fns": "^2.30.0",
-    "dotenv": "^16.3.1",
-    "lodash": "^4.17.21",
-    "playwright": "^1.34.3",
-    "ts-node": "^10.9.1",
-    "typescript": "^5.0.4"
-  },
-  "devDependencies": {
-    "@types/lodash": "^4.14.195",
-    "@types/node": "^20.2.5"
-  }
+    "name": "tennis-auto-reservation",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+        "dev-ng": "ts-node book.ts ng",
+        "dev-yg": "ts-node book.ts yg",
+        "ng": "NODE_ENV=production ts-node book.ts ng",
+        "yg": "NODE_ENV=production ts-node book.ts yg",
+        "ssgsag-dev": "ts-node ssgsag.ts",
+        "ssgsag": "NODE_ENV=production ts-node ssgsag.ts"
+    },
+    "dependencies": {
+        "@well-balanced/utils": "^0.1.3",
+        "date-fns": "^2.30.0",
+        "dotenv": "^16.3.1",
+        "lodash": "^4.17.21",
+        "minimist": "^1.2.8",
+        "playwright": "^1.34.3",
+        "ts-node": "^10.9.1",
+        "typescript": "^5.0.4"
+    },
+    "devDependencies": {
+        "@types/lodash": "^4.14.195",
+        "@types/minimist": "^1.2.2",
+        "@types/node": "^20.2.5"
+    }
 }
