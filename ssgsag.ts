@@ -61,14 +61,15 @@ async function book(page: Page, name: string) {
     await page.waitForSelector('#calendar > div > strong')
 
     let unselectable = await page.locator('td.calendar-unselectable').all()
-    const calendarMonthDismatched = unselectable.length >= 7 * 5
+    console.log(unselectable)
+    const calendarMonthDismatched = unselectable.length >= 7 * 4
     if (calendarMonthDismatched) {
         await page
             .locator(`#calendar > div > a.calendar-btn.calendar-btn-next-mon`)
             .click()
         await msleep(1000)
         unselectable = await page.locator('td.calendar-unselectable').all()
-        const calendarMonthDismatched = unselectable.length >= 7 * 5
+        const calendarMonthDismatched = unselectable.length >= 7 * 4
         if (calendarMonthDismatched) {
             await msleep(1000)
             await page
@@ -96,11 +97,7 @@ async function book(page: Page, name: string) {
                 .flatMap((t) => t.match(/\d+/g))
                 .map((d) => {
                     return format(
-                        parse(
-                            `${calendarTitle} ${d}`,
-                            'MMMM yyyy d',
-                            new Date()
-                        ),
+                        new Date(`${calendarTitle}.${d}`),
                         'yyyy-MM-dd'
                     )
                 })
